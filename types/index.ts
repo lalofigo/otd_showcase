@@ -17,25 +17,32 @@ export interface SetManufacturerProps {
 }
 
 export interface CarProps {
-    city_mpg:number;
-    class:string;
-    combination_mpg:number;
-    cylinders:number;
-    displacement:number;
-    drive:string;
-    fuel_type:string;
-    highway_mpg:number;
-    make:string;
-    model:string;
-    transmission:string;
-    year:number;
+    // city_mpg:number;
+    // class:string;
+    // combination_mpg:number;
+    // cylinders:number;
+    // displacement:number;
+    // drive:string;
+    // fuel_type:string;
+    // highway_mpg:number;
+    // make:string;
+    // model:string;
+    // transmission:string;
+    // year:number;
+    title: string, 
+    brand: string, 
+    size: string, 
+    sizeComplete: string,
+    img: string,
+    price: string,
+    imgSlider:Array<string>,
 
 }
 
 export interface FilterProps {
-    manufacturer: string,
-    year: number,
-    fuel: string,
+    marca: string,
+    talla: string,
+    tipo: string,
     limit: number,
     model: string,
   }

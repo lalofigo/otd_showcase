@@ -9,24 +9,21 @@ import { CustomButton } from "@/components";
 const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
   const router = useRouter();
 
-  const handleNavigation = () => {
-    // Calculate the new limit based on the page number and navigation type
-    const newLimit = (pageNumber + 1) * 10;
+  const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
 
-    // Update the "limit" search parameter in the URL with the new value
-    const newPathname = updateSearchParams("limit", `${newLimit}`);
-    
-    router.push(newPathname, {scroll: false});
-  };
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <div className="w-full flex-center gap-5 mt-10">
       {!isNext && (
-        <CustomButton
-          btnType="button"
-          title="Show More"
-          containerStyles="bg-primary-blue rounded-full text-white"
-          handleClick={handleNavigation}
+        <CustomButton 
+            title="Volver al inicio"
+            containerStyles="bg-primary-blue text-white rounded-full mt-10"
+            handleClick={handleScroll}
         />
       )}
     </div>

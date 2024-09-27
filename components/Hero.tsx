@@ -4,28 +4,32 @@ import CustomButton from "./CustomButton"
 
 const Hero = () => {
   const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
 
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return (
     <div className="hero">
-        <div className="flex-1 pt-40 padding-x">
+        <div className="flex-1 pt-48 padding-x">
             <h1 className="hero__title">
-            Find, book or rent a car --quickly and easily!
+            Descubre y consigue tu estilo ideal en OTD Bazar.
             </h1>
             <p className="hero__subtitle">
-            Streamline your rental experience with our effortless booking process.
+            Encuentra tus prendas favoritas -- fácil y rápido!
             </p>
 
             <CustomButton 
-                title="Explore cars"
+                title="Busca ahora"
                 containerStyles="bg-primary-blue text-white rounded-full mt-10"
                 handleClick={handleScroll}
             />
         </div>
         <div className="hero__image-container">
             <div className="hero__image">
-                <Image src="/hero.png" alt="hero" fill className="object-contain"/>
+                <Image src="/hero.png" alt="hero" fill className="object-contain" priority/>
             </div>
             <div className="hero__image-overlay" />
         </div>

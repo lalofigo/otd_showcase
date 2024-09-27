@@ -2,7 +2,7 @@ import { CarProps } from "@/types";
 import Image from "next/image";
 import {Dialog, DialogPanel, Transition, TransitionChild} from '@headlessui/react'
 import { Fragment } from "react";
-import { generateCarImageUrl } from "@/utils";
+import PhotoSlider from "./PhotoSlider";
 
 interface CarDetailsProps {
   isOpen:boolean;
@@ -41,47 +41,30 @@ const CarDetails = ({isOpen, closeModal, car}:CarDetailsProps) => {
                 <DialogPanel className="relative w-full max-w-lg p-6
                 transform rounded-2xl bg-white  shadow-xl transition-all flex flex-col gap-5
                  max-h-[90vh] overflow-y-auto">
-                  <button type="button" onClick={closeModal} className="absolute top-2 right-2 w-fit p-2 bg-primary-blue-100 z-10 rounded-full">
+                  <button type="button" onClick={closeModal} className="absolute top-2 right-2 w-fit p-2 bg-primary-blue-100 z-50 rounded-full">
                     <Image src="/close.svg" alt="close" width={20} height={20} className="object-contain"/>
                   </button>
                   <div className="flex-1 flex flex-col gap-3">
-                    <div className="relative w-full h-40 bg-pattern 
-                    bg-cover bg-center rounded-lg">
-                      <Image src={generateCarImageUrl(car)} alt="car model"
-                      fill priority className="object-contain" />
-                    </div>
-
-                    <div className="flex gap-3">
-                      <div className="flex-1 relative w-full h-24
-                       bg-primary-blue-100 rounded-lg">
-                        <Image src={generateCarImageUrl(car,'29')} alt="car model"
-                        fill priority className="object-contain" />
-                      </div>
-                      <div className="flex-1 relative w-full h-24
-                       bg-primary-blue-100 rounded-lg">
-                        <Image src={generateCarImageUrl(car,'33')} alt="car model"
-                        fill priority className="object-contain" />
-                      </div>
-                      <div className="flex-1 relative w-full h-24
-                       bg-primary-blue-100 rounded-lg">
-                        <Image src={generateCarImageUrl(car,'13')} alt="car model"
-                        fill priority className="object-contain" />
-                      </div>
-
-                    </div>
+                    <PhotoSlider photos={car.imgSlider} />
                   </div>
                   <div className="flex-1 flex flex-col gap-2">
                     <h2 className="font-semibold text-xl capitalize">
-                      {car.make} {car.model}
+                      {car.title}
                     </h2>
-                    <div className="mt-3 flex flex-wrap gap-3">
+                    <div className="mt-2 flex flex-wrap gap-3 flex-row-reverse">
                       {Object.entries(car).map(([key,value]) => (
-                        <div className="flex justify-between gap-5 w-full text-right" key={key}>
-                            <h4 className="capitalize text-grey">
-                              {key.split("_").join(" ")}
-                              </h4>
-                            <p className="text-black-100 font-semibold">{value}</p>
-                        </div>
+                        key !== "title" && key !== "size" && key !== "img" && key !== "type" && key !== "imgSlider" &&
+                        (<div className="flex justify-between flex-auto text-center" key={key}>
+                            {
+                              key !== 'price' ?
+                              <p className="text-black-100 font-normal mt-2">{value}</p>
+                              :
+                              <span className="bg-orange-400 rounded-full text-white text-lg font-bold px-3 py-2 
+                              leading-none flex items-center">${value}</span>
+                            }
+                            
+                        </div>)
+                        
                       ))}
                     </div>
                   </div>

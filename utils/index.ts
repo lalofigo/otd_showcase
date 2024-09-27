@@ -1,17 +1,32 @@
 import { CarProps, FilterProps } from "@/types";
+import { clothes } from '@/constants'
 
 export async function fetchCars(filters:FilterProps) {
-    const {manufacturer, year, model, limit, fuel} = filters;
-    const headers = {
-		'x-rapidapi-key': '8de5f48cd4msh1810cbde2b5d906p12d04bjsn2c0c5e145341',
-		'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'
-	}
+    const {marca, talla, tipo, limit} = filters;
+    // const headers = {
+	// 	'x-rapidapi-key': '8de5f48cd4msh1810cbde2b5d906p12d04bjsn2c0c5e145341',
+	// 	'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'
+	// }
 
-    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`, {
-        headers: headers,
-    });
+    // const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`, {
+    //     headers: headers,
+    // });
 
-    const result =await response.json();
+    let result: { title: string; brand: string; size: string; sizeComplete: string; img: string; price: string; type: string; imgSlider:Array<string> }[] = [];
+    const manufacturerUpperCase = marca.charAt(0).toUpperCase() + marca.slice(1)
+    
+    result = clothes;
+    if (marca !== ""){
+        result = result.filter(producto => producto.brand === manufacturerUpperCase);
+    }
+    if (talla !== ""){
+        result = result.filter(producto => producto.size === talla);
+    }
+    if (tipo !== ""){
+        result = result.filter(producto => producto.type === tipo);
+    }
+
+   
 
     return result;
 
@@ -32,18 +47,7 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
     return rentalRatePerDay.toFixed(0);
   };
 
-  export const generateCarImageUrl = (car: CarProps, angle?: string) => {
-    const url = new URL("https://cdn.imagin.studio/getimage");
-    const { make, model, year } = car;
-
-    url.searchParams.append('customer', 'hrjavascript-mastery' || '');
-    url.searchParams.append('make', make);
-    url.searchParams.append('modelFamily', model.split(' ')[0]);
-    url.searchParams.append('zoomType', 'fullScreen');
-    url.searchParams.append('modelYear', `${year}`);
-    url.searchParams.append('angle', `${angle}`);
-    return `${url}`
-  }
+ 
 
   export const updateSearchParams = (type: string, value: string) => {
     // Get the current URL search params

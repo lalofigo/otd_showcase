@@ -8,17 +8,18 @@ function Navbar() {
         <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
             <Link href="/" className="flex justify-center items-center">
                 <Image 
-                    src="/logo.svg" 
+                    src="/logo_otd.png" 
                     alt="Logo" 
-                    width={118} 
-                    height={18} 
+                    width={190} 
+                    height={190}
                     className="object-contain"
+                    priority
                 />
             </Link>
-            <CustomButton
+            {/* <CustomButton
                     title="Sign In"
                     btnType="button"
-                    containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" />
+                    containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" /> */}
         </nav>
     </header>
   )

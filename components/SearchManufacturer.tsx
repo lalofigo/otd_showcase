@@ -18,19 +18,19 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SetManufacturerProp
     <div className='search-manufacturer'>
         <Combobox value={manufacturer} onChange={setManufacturer}>
             <div className='relative w-full'>
-                <ComboboxButton className="absolute top-[14px]">
+                <ComboboxButton className="absolute top-[12px]">
                     <Image
-                    src="/car-logo.svg"
-                    width={20}
-                    height={20}
+                    src="/clothing-logo.png"
+                    width={22}
+                    height={22}
                     className="ml-4"
-                    alt="Car Logo"
+                    alt="Clothing Logo"
                     />
                 </ComboboxButton>
 
                 <ComboboxInput
                 className="search-manufacturer__input"
-                placeholder='VolksWagen'
+                placeholder='Marca'
                 displayValue={(manufacturer: string) => manufacturer}
                 onChange={(e) => setQuery(e.target.value)}
                 />
@@ -42,7 +42,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SetManufacturerProp
                 leaveTo="opacity-0"
                 afterLeave={() => setQuery("")}
                 >
-                    <ComboboxOptions>
+                    <ComboboxOptions >
                         {
                             filteredManufacturers.map((item) => (
                                 <ComboboxOption
