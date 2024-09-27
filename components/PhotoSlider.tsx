@@ -48,8 +48,8 @@ const PhotoSlider = ({photos}:PhotoSliderProps) => {
                         <Image
                             src={photos[currentIndex]}
                             alt={`Imagen ${currentIndex + 1}`}
-                            quality={55}
-                            sizes="(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw"
+                            quality={75}
+                            sizes="100%"
                             fill         // Hace que la imagen ocupe todo el contenedor
                             style={{objectFit:"cover"}}       // Hace que la imagen mantenga su proporción
                             priority               // Mejora la carga de la imagen actual

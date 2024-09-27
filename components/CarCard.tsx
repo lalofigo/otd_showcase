@@ -49,7 +49,7 @@ const CarCard = ({car}:CarCardProps) => {
         </div>
 
         <div className="relative flex w-full mt-2">
-            <div className="flex group-hover:invisible w-full justify-between text-gray">
+            <div className="flex w-full justify-between text-gray">
                 <div className=" flex flex-col justify-center items-center gap-2">
                     <Image src="/brand-icon.png" width={20} height={20} alt="marca"/>
                     <p className="text-[14px]">
