@@ -31,7 +31,7 @@ const PhotoSlider = ({photos}:PhotoSliderProps) => {
     };
 
     return (
-        <div className="relative max-w-lg h-[350px] w-[200px] mx-auto">
+        <div className="relative max-w-lg h-[466px] w-[350px] mx-auto">
                 <div className="w-full h-full rounded-lg overflow-hidden">
                     {/* <img
                             src={photos[currentIndex]}

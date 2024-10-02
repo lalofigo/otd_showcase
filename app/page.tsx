@@ -34,7 +34,9 @@ export default async function Home({ searchParams }: HomeProps) {
           
 
           <div className='home__filter-container'>
+            <div style={{ position: "relative", zIndex: 30 }}>
             <CustomFilter title='marca' options={marca} />
+            </div>
             <CustomFilter title='talla' options={talla} />
             <CustomFilter title='tipo' options={tipo} />
            

@@ -3,8 +3,8 @@ import "./globals.css";
 import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Car Hub",
-  description: "Discover the best cars in the world",
+  title: "OTD Bazar - Aguascalientes",
+  description: "OTD Bazar Aguascalientes. Ropa second hand con las mejores marcas.",
 };
 
 export default function RootLayout({

@@ -17,7 +17,18 @@ export async function fetchCars(filters:FilterProps) {
     
     result = clothes;
     if (marca !== ""){
-        result = result.filter(producto => producto.brand === manufacturerUpperCase);
+        if (marca === "ca"){
+            result = result.filter(producto => producto.brand === 'C&A');
+        }else {
+            if (marca === "hm"){
+                result = result.filter(producto => producto.brand === 'H&M');
+            }
+            else{
+                result = result.filter(producto => producto.brand === manufacturerUpperCase);
+            }
+        }
+        
+        
     }
     if (talla !== ""){
         result = result.filter(producto => producto.size === talla);

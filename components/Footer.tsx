@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="flex max-md:flex-col flex-wrap justify-between 
         gap-5 sm:px-16 px-6 py-10">
             <div className="flex flex-col justify-start items-start gap-6">
-                <Image src="/logo.svg" alt="logo" width={118} height={18} 
+                <Image src="/logo_otd.png" alt="logo" width={60} height={60} 
                 className="object-contain" />
                 <p className="text-base text-gray-700">
-                    Carhub 2023 <br/> All rights reserved &copy;
+                    OTD Bazar 2024 <br/> Todos los derechos reservados &copy;
                 </p>
             </div>
             <div className="footer__links">
@@ -35,15 +35,10 @@ const Footer = () => {
 
             <div className="flex justify-between items-center flex-wrap 
             mt-10 border-top-10 border-gray-100 sm:px-16 px-6 py-10">
-                <p>@2024 CarHub. All Rights Reserved </p>
-                <div className="footer__copyrights-link">
-                    <Link href="/" className="text-gray-500">
-                    Privacy Policy
-                    </Link>
-                    <Link href="/" className="text-gray-500">
-                    Terms of Use
-                    </Link>
-                </div>
+                <p>@2024 OTD Bazar. Todos los Derechos Reservados </p>
+                {/* <div className="footer__copyrights-link">
+    
+                </div> */}
 
             </div>
     </footer>

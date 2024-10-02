@@ -229,7 +229,7 @@
         "/clothes/otro/Image (45).jpg"],
     },
     { title: "Camiseta Transparencias Azul", 
-      brand: "Otro", 
+      brand: "Fango", 
       size:"s", 
       sizeComplete:"Chica (S)",
       img:"/clothes/otro/Image (57).jpg",
@@ -241,7 +241,7 @@
         "/clothes/otro/Image (55).jpg"],
     },
     { title: "Camisa Transparencias Negra", 
-      brand: "Otro", 
+      brand: "Fango", 
       size:"s", 
       sizeComplete:"Chica (S)",
       img:"/clothes/otro/Image (61).jpg",
@@ -265,7 +265,7 @@
         "/clothes/otro/Image (77).jpg"],
     },
     { title: "Camisa blanca Transparencias", 
-      brand: "Otro", 
+      brand: "Fango", 
       size:"m", 
       sizeComplete:"Mediana (M)",
       img:"/clothes/otro/Image (133).jpg",
@@ -470,6 +470,7 @@
     { title: "Cuidado con el perro", value: "cuidado con el perro" },
     { title: "Fango", value: "fango" },
     { title: "H&M", value: "hm" },
+    { title: "Otro", value: "otro" },
     { title: "Pull & Bear", value: "pull and bear" },
     { title: "Zara", value: "zara" },
   ];
@@ -481,30 +482,10 @@
   
   export const footerLinks = [
     {
-      title: "About",
+      title: "Nuestras redes",
       links: [
-        { title: "How it works", url: "/" },
-        { title: "Featured", url: "/" },
-        { title: "Partnership", url: "/" },
-        { title: "Bussiness Relation", url: "/" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { title: "Events", url: "/" },
-        { title: "Blog", url: "/" },
-        { title: "Podcast", url: "/" },
-        { title: "Invite a friend", url: "/" },
-      ],
-    },
-    {
-      title: "Socials",
-      links: [
-        { title: "Discord", url: "/" },
-        { title: "Instagram", url: "/" },
-        { title: "Twitter", url: "/" },
-        { title: "Facebook", url: "/" },
+        { title: "Instagram", url: "https://www.instagram.com/otd.bazar?igsh=MWJvc2Y4ODZyYzhudw%3D%3D&utm_source=qr" },
+        { title: "Facebook", url: "https://www.facebook.com/share/CRhBqYjVjQD6bp1o/?mibextid=LQQJ4d" },
       ],
     },
   ];
