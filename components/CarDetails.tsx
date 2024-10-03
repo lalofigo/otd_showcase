@@ -40,7 +40,7 @@ const CarDetails = ({isOpen, closeModal, car}:CarDetailsProps) => {
               >
                 <DialogPanel className="relative w-full max-w-lg p-6
                 transform rounded-2xl bg-white  shadow-xl transition-all flex flex-col gap-5
-                 max-h-[90vh] overflow-y-auto">
+                 max-h-[90vh] overflow-y-auto max-[450px]:p-2">
                   <button type="button" onClick={closeModal} className="absolute top-2 right-2 w-fit p-2 bg-primary-blue-100 z-50 rounded-full">
                     <Image src="/close.svg" alt="close" width={20} height={20} className="object-contain"/>
                   </button>
