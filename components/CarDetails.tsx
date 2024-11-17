@@ -8,7 +8,7 @@ interface CarDetailsProps {
   isOpen:boolean;
   closeModal: () => void;
   car: CarProps;
-  
+
 }
 
 const CarDetails = ({isOpen, closeModal, car}:CarDetailsProps) => {
@@ -59,12 +59,12 @@ const CarDetails = ({isOpen, closeModal, car}:CarDetailsProps) => {
                               key !== 'price' ?
                               <p className="text-black-100 font-normal mt-2">{value}</p>
                               :
-                              <span className="bg-orange-400 rounded-full text-white text-lg font-bold px-3 py-2 
+                              <span className="bg-orange-400 rounded-full text-white text-lg font-bold px-3 py-2
                               leading-none flex items-center">${value}</span>
                             }
-                            
+
                         </div>)
-                        
+
                       ))}
                     </div>
                   </div>

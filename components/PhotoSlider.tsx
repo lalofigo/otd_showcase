@@ -11,7 +11,7 @@ const images = [
 
 interface PhotoSliderProps {
     photos:Array<string>;
-    
+
   }
 
 const PhotoSlider = ({photos}:PhotoSliderProps) => {
@@ -57,7 +57,7 @@ const PhotoSlider = ({photos}:PhotoSliderProps) => {
                 </div>
             <button
                 onClick={goToPrevious}
-                className="absolute top-1/2 w-10 h-10 bg-primary-blue rounded-full flex items-center 
+                className="absolute top-1/2 w-10 h-10 bg-primary-blue rounded-full flex items-center
                 justify-center focus:outline-none"
             >
                 <Image src="/previous.png" width={20} height={20}
