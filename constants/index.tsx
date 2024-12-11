@@ -137,7 +137,7 @@
       size:"xs",
       sizeComplete:"Extrachica (XS)",
       img:"/clothes/ccp/Image (67).jpg",
-      price:"200",
+      price:"250",
       type:"top",
       imgSlider:[
         "/clothes/ccp/Image (67).jpg",
@@ -173,7 +173,7 @@
       size:"xs",
       sizeComplete:"Extrachica (XS)",
       img:"/clothes/forever21/Image (30).jpg",
-      price:"350",
+      price:"400",
       type:"top",
       imgSlider:[
         "/clothes/forever21/Image (30).jpg",
@@ -185,7 +185,7 @@
       size:"xs",
       sizeComplete:"Extrachica (XS)",
       img:"/clothes/forever21/Image (27).jpg",
-      price:"250",
+      price:"350",
       type:"top",
       imgSlider:[
         "/clothes/forever21/Image (27).jpg",
@@ -233,7 +233,7 @@
       size:"xs",
       sizeComplete:"Extrachica (XS)",
       img:"/clothes/hm/Image (25a).jpg",
-      price:"200",
+      price:"250",
       type:"top",
       imgSlider:[
         "/clothes/hm/Image (25a).jpg",
@@ -257,7 +257,7 @@
       size:"s",
       sizeComplete:"Chica (S)",
       img:"/clothes/hm/Image (76).jpg",
-      price:"300",
+      price:"350",
       type:"top",
       imgSlider:[
         "/clothes/hm/Image (76).jpg",
@@ -533,7 +533,7 @@
       size:"s",
       sizeComplete:"Chica (S)",
       img:"/clothes/zara/Image (31a).jpg",
-      price:"200",
+      price:"250",
       type:"top",
       imgSlider:[
         "/clothes/zara/Image (31a).jpg",
@@ -641,7 +641,7 @@
       size:"s",
       sizeComplete:"Chica (S)",
       img:"/clothes/zara/Image (6).jpg",
-      price:"300",
+      price:"350",
       type:"top",
       imgSlider:[
         "/clothes/zara/Image (6).jpg",
