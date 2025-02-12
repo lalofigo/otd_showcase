@@ -84,9 +84,10 @@ const CarCard = ({car}:CarCardProps) => {
     //     <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
     // </div>
 
-
-    <div className="relative mb-0 flex w-full  max-w-sm
-    flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md xs:m-auto sm:m-auto">
+    <>
+    <div className="relative mb-0 flex w-full  max-w-xs
+    flex-col overflow-hidden rounded-lg border border-gray-100
+    bg-white shadow-md xs:m-auto sm:m-auto" onClick={() => setIsOpen(true)}>
         <div className="relative mx-3 mt-3 flex h-96 overflow-hidden rounded-xl">
             {
                 loading && (
@@ -122,6 +123,10 @@ const CarCard = ({car}:CarCardProps) => {
         </div>
     </div>
 
+    {isOpen && (
+        <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+    )}
+    </>
   )
 }
 
